@@ -1,5 +1,5 @@
 services:
-    "${organization_name}-gateway-app:"
+    gateway-app:
         image: "${gateway_image}"
         external_links:
             - gateway-mysql-${organization_name}:mysql
