@@ -12,32 +12,32 @@
       default: "calpoly"
       type: "string"
     - variable: organization_port
-      description: "Port for Organization"
-      label: "Port for Organization"
+      description: "Network Port Organization"
+      label: "Network Port Organization"
       required: true
       default: "8081"
       type: "int"
     - variable: gateway_image
-      description: "Name Repository Gateway"
-      label: "Name Repository Gateway"
+      description: "Address Repository Gateway Component"
+      label: "Address Repository Gateway Component"
       required: true
       default: "rohling/gateway"
       type: "string"
     - variable: gs_image
-      description: "Name Repository Groundstation"
-      label: "Name Repository Groundstation"
+      description: "Address Repository Groundstation Component"
+      label: "Address Repository Groundstation Component"
       required: true
       default: "rohling/groundstation"
       type: "string"
     - variable: sc_image
-      description: "Name Repository Spacecraft"
-      label: "Name Repository Spacecraft"
+      description: "Address Repository Spacecraft Component"
+      label: "Address Repository Spacecraft Component"
       required: true
       default: "rohling/spacecraft"
       type: "string"
     - variable: tc_image
-      description: "Name Repository Telecommand"
-      label: "Name Repository Telecommand"
+      description: "Address Repository Telecommand Component"
+      label: "Address Repository Telecommand Component"
       required: true
       default: "rohling/telecommand"
       type: "string"
