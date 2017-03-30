@@ -9,13 +9,13 @@
       description: "Name Organization"
       label: "Name Organization"
       required: true
-      default: 
+      default: "calpoly"
       type: "string"
     - variable: organization_port
       description: "Port for Organization"
       label: "Port for Organization"
       required: true
-      default: 
+      default: "8081"
       type: "int"
     - variable: gateway_image
       description: "Name Repository Gateway"
