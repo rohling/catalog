@@ -5,13 +5,13 @@
   uuid: # Unique identifier to be used for upgrades. Please see note.
   minimum_rancher_version: v1.0.0-rc2
   questions: 
-    - variable: organization-name
+    - variable: organization_name
       description: "Name Organization"
       label: "Name Organization"
       required: true
       default: 
       type: "string"
-    - variable: organization-port
+    - variable: organization_port
       description: "Port for Organization"
       label: "Port for Organization"
       required: true
