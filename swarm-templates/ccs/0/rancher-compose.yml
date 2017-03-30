@@ -1,0 +1,26 @@
+.catalog:
+  name: "CCS"
+  version: 1.0
+  description:  Description of the versioned template of the Catalog Entry
+  uuid: # Unique identifier to be used for upgrades. Please see note.
+  minimum_rancher_version: v1.0.0-rc2
+  questions: 
+    - variable: organization-name
+      description: "Name Organization"
+      label: "Name Organization"
+      required: true
+      default: 
+      type: "string"
+    - variable: organization-port
+      description: "Port for Organization"
+      label: "Port for Organization"
+      required: true
+      default: 
+      type: "int"
+    - variable: gateway_image
+      description: "Name Repository Gateway"
+      label: "Name Repository Gateway"
+      required: true
+      default: "rohling/gateway"
+      type: "string"
+
