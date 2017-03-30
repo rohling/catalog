@@ -1,6 +1,6 @@
 version: '2'
 services:
-    "${organization_name}-gateway-app"
+    ${organization_name}-gateway-app
         image: "${gateway_image}"
         external_links:
             - gateway-mysql-${organization_name}:mysql
