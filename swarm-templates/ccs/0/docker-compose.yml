@@ -1,5 +1,5 @@
 services:
-    ${organization_name}-gateway-app:
+    "${organization_name}-gateway-app":
         image: "${gateway_image}"
         external_links:
             - gateway-mysql-${organization_name}:mysql
@@ -12,7 +12,7 @@ services:
             - JHIPSTER_REGISTRY_PASSWORD=admin
             - ORGANIZATION_NAME=${organization_name}
         ports:
-            - ${organization-port}:80
+            - "${organization-port}:80"
 
     gateway-mysql-${organization_name}:
         image: mysql:5.7.13
