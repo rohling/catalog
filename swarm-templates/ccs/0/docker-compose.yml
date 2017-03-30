@@ -21,5 +21,43 @@ services:
             - MYSQL_ALLOW_EMPTY_PASSWORD=yes
             - MYSQL_DATABASE=gateway
         command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8
+    mysql:
+        image: mysql:5.7.13
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=calpoly
+        command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8
 
-   
+    groundstation-app:
+        image: "${gs_image}"
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@192.168.99.101:8761/config
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/calpoly?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10
+            - JHIPSTER_REGISTRY_PASSWORD=admin
+            - ORGANIZATION_NAME=${organization_name}
+
+    spacecraft-app:
+        image: "${sc_image}"
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@192.168.99.101:8761/config
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/calpoly?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10
+            - JHIPSTER_REGISTRY_PASSWORD=admin
+            - ORGANIZATION_NAME=${organization_name}
+    
+    telecommand-app:
+        image: "${tc_image}"
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@192.168.99.101:8761/config
+            - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/calpoly?useUnicode=true&characterEncoding=utf8&useSSL=false
+            - JHIPSTER_SLEEP=10
+            - JHIPSTER_REGISTRY_PASSWORD=admin
+            - ORGANIZATION_NAME=${organization_name}
+
+
+  
