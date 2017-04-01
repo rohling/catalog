@@ -6,7 +6,7 @@ services:
             - gateway-mysql:mysql
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_CLOUD_CONFIG_URI=http://admin:admin@192.168.99.101:8761/config
+            - SPRING_CLOUD_CONFIG_URI=http://admin:admin@104.198.133.169:8761/config
             - SPRING_DATASOURCE_URL=jdbc:mysql://gateway-mysql:3306/gateway?useUnicode=true&characterEncoding=utf8&useSSL=false
             - SPRING_DATA_CASSANDRA_CONTACTPOINTS=cassandra
             - JHIPSTER_REGISTRY_PASSWORD=admin
@@ -33,9 +33,8 @@ services:
         image: "${gs_image}"
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@192.168.99.101:8761/config
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@104.198.133.169:8761/config
             - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/ccs?useUnicode=true&characterEncoding=utf8&useSSL=false
-            - JHIPSTER_SLEEP=10
             - JHIPSTER_REGISTRY_PASSWORD=admin
             - ORGANIZATION_NAME=${organization_name}
 
@@ -43,9 +42,8 @@ services:
         image: "${sc_image}"
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@192.168.99.101:8761/config
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@104.198.133.169:8761/config
             - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/ccs?useUnicode=true&characterEncoding=utf8&useSSL=false
-            - JHIPSTER_SLEEP=10
             - JHIPSTER_REGISTRY_PASSWORD=admin
             - ORGANIZATION_NAME=${organization_name}
     
@@ -53,9 +51,8 @@ services:
         image: "${tc_image}"
         environment:
             - SPRING_PROFILES_ACTIVE=prod,swagger
-            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@192.168.99.101:8761/config
+            - SPRING_CLOUD_CONFIG_URI=http://admin:$${jhipster.registry.password}@104.198.133.169:8761/config
             - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/ccs?useUnicode=true&characterEncoding=utf8&useSSL=false
-            - JHIPSTER_SLEEP=10
             - JHIPSTER_REGISTRY_PASSWORD=admin
             - ORGANIZATION_NAME=${organization_name}
 

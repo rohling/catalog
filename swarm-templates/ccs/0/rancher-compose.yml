@@ -1,6 +1,5 @@
 .catalog:
   name: "CCS"
-  version: 1.0
   description:  Description of the versioned template of the Catalog Entry
   uuid: # Unique identifier to be used for upgrades. Please see note.
   minimum_rancher_version: v1.0.0-rc2
