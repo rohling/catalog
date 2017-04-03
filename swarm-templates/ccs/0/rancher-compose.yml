@@ -1,5 +1,5 @@
 .catalog:
-  name: "CCS"
+  name: ""
   version: "1.0.0"
   description:  Compose CCS Components
   uuid: # Unique identifier to be used for upgrades. Please see note.
